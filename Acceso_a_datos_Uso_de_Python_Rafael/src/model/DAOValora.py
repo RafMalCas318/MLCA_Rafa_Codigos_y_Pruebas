@@ -26,7 +26,7 @@ class DAOValora(DAOBase):
             print("[ERROR]   No se ha agregado correctamente la valoracion.")
             return False
         finally:
-            self.cerrarConexion()
+            self.cerrarCursor()
 
     def eliminarValoracion(self, valor):
         sql = """
@@ -44,7 +44,7 @@ class DAOValora(DAOBase):
             print ("[ERROR]   No se ha eliminado correctamente la valoracion.", e)
             return False
         finally:
-            self.cerrarConexion()
+            self.cerrarCursor()
 
     """def asignarValoracionAUnUsuarioYContenido(self, valor, id_usuario, id_contenido):
         sql = 

@@ -40,9 +40,9 @@ class Contenido:
     def _printContenido(self):
         contenido_str = (
             f"ID Contenido: {self.__id_contenido}\n"
-            f"Título: {self.__name}\n"
-            f"Ruta de Acceso: {self.__pach}\n"
-            f"Tamaño: {self.__size}\n"
+            f"Título: {self.__nameContenido}\n"
+            f"Ruta de Acceso: {self.__pachContenido}\n"
+            f"Tamaño: {self.__sizeContenido}\n"
         )
         return contenido_str
 

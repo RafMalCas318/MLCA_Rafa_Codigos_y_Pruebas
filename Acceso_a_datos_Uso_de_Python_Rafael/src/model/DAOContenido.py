@@ -22,7 +22,7 @@ class DAOContenido(DAOBase):
             print("[ERROR]   No se ha podido agregar el contenido: ", e)
             return False
         finally:
-            self.cerrarConexion()
+            self.cerrarCursor()
 
     def listarContenidos(self):
         lista = []
@@ -37,7 +37,7 @@ class DAOContenido(DAOBase):
                     row[0], row[1], row[2], row[3]
                 ))
         finally:
-            self.cerrarConexion()
+            self.cerrar
 
         return lista
 
@@ -55,7 +55,7 @@ class DAOContenido(DAOBase):
             print("[ERROR]   No se ha eliminado el contenido: ", e)
             return False
         finally:
-            self.cerrarConexion()
+            self.cerrarCursor()
 
     def actualizarContenido(self, contenido):
         sql = """
@@ -71,6 +71,6 @@ class DAOContenido(DAOBase):
             print("[ERROR]   No se ha actualizado el contenido: ", e)
             return False
         finally:
-            self.cerrarConexion()
+            self.cerrarCursor()
 
 

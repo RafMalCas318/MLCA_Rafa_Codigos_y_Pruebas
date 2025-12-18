@@ -38,7 +38,7 @@ class ControladorUsuario:
         return self.dao.obtenerContenidosPorUsuario(id_usuario)
 
     def cerrar(self):
-        self.dao.cerrarUsuario()
+        self.dao.cerrarConexionGlobal()
 
     def agregarValoracionDesdeUsuarioAUnContenido(self, Valora):
         self.dao.agregarValoracionDesdeUsuario(Valora)
